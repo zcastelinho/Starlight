@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tiro dragon.mp3-2167c681aac68f465fcad3aba2f59f94.mp3str"
+
+[deps]
+
+source_file="res://Material starlight/sons/tiro dragon.mp3"
+dest_files=[ "res://.import/tiro dragon.mp3-2167c681aac68f465fcad3aba2f59f94.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

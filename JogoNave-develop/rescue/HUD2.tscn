@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://HUD2.gd" type="Script" id=1]
+[ext_resource path="res://Material starlight/HUD/hud0.png" type="Texture" id=2]
+[ext_resource path="res://Material starlight/HUD/game_over.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Material starlight/HUD/hud1.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 3 )
+
+[node name="HUD2" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 12.1116
+margin_top = -0.0950165
+margin_right = 29.1116
+margin_bottom = 45.905
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pontos" type="Label" parent="."]
+margin_left = 6.0
+margin_right = 1198.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="combustivel" type="TextureProgress" parent="."]
+margin_left = 369.614
+margin_top = 736.643
+margin_right = 621.614
+margin_bottom = 749.643
+rect_scale = Vector2( 2, 2 )
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tempo" type="Timer" parent="."]
+autostart = true
+[connection signal="timeout" from="tempo" to="." method="_on_tempo_timeout"]

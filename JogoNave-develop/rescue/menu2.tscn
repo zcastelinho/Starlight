@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://menu2.gd" type="Script" id=1]
+[ext_resource path="res://Material starlight/HUD/GameSetDemoRegular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Material starlight/fundogalaxia.jpg" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="menu2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundogalaxia" type="Sprite" parent="."]
+position = Vector2( 924.864, 320.619 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -339.204
+margin_top = 104.534
+margin_right = 347.796
+margin_bottom = 259.534
+custom_fonts/font = SubResource( 1 )
+text = "Você passou para a fase 
+dois parabéns"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fase2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -68.5585
+margin_top = -98.1716
+margin_right = 79.4415
+margin_bottom = -42.1716
+custom_fonts/font = SubResource( 2 )
+text = "Continuar"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="fase2" to="." method="_on_fase2_pressed"]

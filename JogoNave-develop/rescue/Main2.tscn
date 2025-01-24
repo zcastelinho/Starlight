@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://HUD2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Material starlight/fundogalaxia.jpg" type="Texture" id=3]
+[ext_resource path="res://navegran.tscn" type="PackedScene" id=4]
+[ext_resource path="res://naveatir.tscn" type="PackedScene" id=5]
+[ext_resource path="res://asteroide.tscn" type="PackedScene" id=6]
+[ext_resource path="res://recuperador.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Main2.gd" type="Script" id=8]
+
+[node name="Main2" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="fundogalaxia" type="Sprite" parent="."]
+position = Vector2( 566.522, 455.023 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="HUD2" parent="." instance=ExtResource( 2 )]
+
+[node name="Player2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 516.777, 368.484 )
+
+[node name="navegran" parent="." instance=ExtResource( 4 )]
+position = Vector2( 14.44, 216.6 )
+
+[node name="navegran2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -5.38797, 537.346 )
+
+[node name="naveatir" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1193.18, 365.068 )
+
+[node name="asteroide" parent="." instance=ExtResource( 6 )]
+position = Vector2( 648.684, 249.163 )
+
+[node name="recuperador" parent="." instance=ExtResource( 7 )]
+position = Vector2( 456.799, 555.605 )
+
+[node name="geracao" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="dragao" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="sangue" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 45.0
+autostart = true
+[connection signal="timeout" from="geracao" to="." method="_on_geracao_timeout"]
+[connection signal="timeout" from="dragao" to="." method="_on_dragao_timeout"]
+[connection signal="timeout" from="sangue" to="." method="_on_sangue_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

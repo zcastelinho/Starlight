@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Travis-Scott-FE_N-_Official-Audio_-ft.-Playboi-Carti.wav-3355a94f79d071468c785faafe052459.sample"
+
+[deps]
+
+source_file="res://Material starlight/sons/Travis-Scott-FE_N-_Official-Audio_-ft.-Playboi-Carti.wav"
+dest_files=[ "res://.import/Travis-Scott-FE_N-_Official-Audio_-ft.-Playboi-Carti.wav-3355a94f79d071468c785faafe052459.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
