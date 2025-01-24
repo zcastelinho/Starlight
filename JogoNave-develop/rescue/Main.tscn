@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Alien.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Material starlight/fundogalaxia.jpg" type="Texture" id=3]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Astronauta.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Combustivel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Main.gd" type="Script" id=7]
+[ext_resource path="res://Material starlight/sons/Star-Wars-TIE-fighter-flyby-and-spinout-sound-FX-_1_-_online-audio-converter.com_.wav" type="AudioStream" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 808.024, 22.5094 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 826.987, 30.4971 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 562.735, 456.292 )
+scale = Vector2( 1.06279, 1.40256 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232.945, 181.553 )
+
+[node name="Alien3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 406.98, 319.578 )
+
+[node name="Alien2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 454.905, 199.765 )
+
+[node name="Combustivel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 195.843, 374.538 )
+
+[node name="Astronauta" parent="." instance=ExtResource( 5 )]
+position = Vector2( 435.006, 393.491 )
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="gerac" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="geracao" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="dragao" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="sangue" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 582.175, -25.3496 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 557.424, 872.688 )
+shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+[connection signal="timeout" from="gerac" to="." method="_on_gerac_timeout"]
+[connection signal="timeout" from="geracao" to="." method="_on_geracao_timeout"]
+[connection signal="timeout" from="dragao" to="." method="_on_dragao_timeout"]
+[connection signal="timeout" from="sangue" to="." method="_on_sangue_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

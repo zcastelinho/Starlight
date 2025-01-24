@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Morte2.gd" type="Script" id=1]
+[ext_resource path="res://Material starlight/HUD/game_over.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Material starlight/image.jpg" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 150
+outline_color = Color( 0.839216, 0.109804, 0.109804, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Morte2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 522.721, 305.278 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="image" type="Sprite" parent="."]
+position = Vector2( 708.257, 485.15 )
+scale = Vector2( 4.70124, 4.27851 )
+texture = ExtResource( 3 )
+offset = Vector2( -24.5003, -17.9164 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -147.351
+margin_top = -83.3568
+margin_right = 143.649
+margin_bottom = -20.3568
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Button" parent="HBoxContainer"]
+margin_right = 110.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 1 )
+text = "Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vol2" type="Button" parent="HBoxContainer"]
+margin_left = 150.0
+margin_right = 291.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 1 )
+text = "Fase II"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_bottom = 0.008
+margin_left = 632.556
+margin_top = 323.71
+margin_right = 992.556
+margin_bottom = 468.99
+rect_pivot_offset = Vector2( -0.746948, 27.1155 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.352941, 0, 0, 1 )
+text = "YOU DIED !!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="HBoxContainer/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="HBoxContainer/vol2" to="." method="_on_vol2_pressed"]

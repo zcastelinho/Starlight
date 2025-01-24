@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/VINHETA-DE-ABERTURA-_-PEPPA-PIG-_-TV-CULTURA-_-2015_1.wav-c0330dda2cc665c0f47a90d9338de31c.sample"
+
+[deps]
+
+source_file="res://Material starlight/sons/VINHETA-DE-ABERTURA-_-PEPPA-PIG-_-TV-CULTURA-_-2015_1.wav"
+dest_files=[ "res://.import/VINHETA-DE-ABERTURA-_-PEPPA-PIG-_-TV-CULTURA-_-2015_1.wav-c0330dda2cc665c0f47a90d9338de31c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

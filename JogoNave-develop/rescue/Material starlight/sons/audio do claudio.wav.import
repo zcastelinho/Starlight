@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/audio do claudio.wav-6c6cbeab641e0edfdab2c4e45a6bc702.sample"
+
+[deps]
+
+source_file="res://Material starlight/sons/audio do claudio.wav"
+dest_files=[ "res://.import/audio do claudio.wav-6c6cbeab641e0edfdab2c4e45a6bc702.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

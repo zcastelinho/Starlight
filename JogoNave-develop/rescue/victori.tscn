@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://victori.gd" type="Script" id=1]
+[ext_resource path="res://Material starlight/fundogalaxia.jpg" type="Texture" id=2]
+[ext_resource path="res://Material starlight/HUD/game_over.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 3 )
+
+[node name="victori" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundogalaxia" type="Sprite" parent="."]
+position = Vector2( 501.617, 360.441 )
+texture = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -117.573
+margin_top = -51.2495
+margin_right = 1310.43
+margin_bottom = 876.75
+color = Color( 0, 0, 0, 0.262745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -192.0
+margin_top = 129.0
+margin_right = 192.0
+margin_bottom = 242.0
+custom_fonts/font = SubResource( 1 )
+text = "You won !!!"
+
+[node name="return" type="Button" parent="."]
+margin_left = 526.062
+margin_top = 732.567
+margin_right = 730.062
+margin_bottom = 795.567
+custom_fonts/font = SubResource( 2 )
+text = "recomecar"
+flat = true
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]
